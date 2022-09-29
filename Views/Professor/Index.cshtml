@@ -1,0 +1,37 @@
+@model IEnumerable<lab3.Models.Professor>
+
+@{
+    ViewData["Title"] = "Professores";
+}
+
+<div class="jumbotron jumbotron-fluid text-center">
+  <div class="container">
+    <h1 class="display-4">Professores</h1>
+  </div>
+</div>
+<div class="container">
+    <table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Código</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Idade</th>
+      <th scope="col">Sexo</th>
+      <th scope="col">Materia</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach (var professor in Model)
+      {
+        <tr>
+            <td>@professor.Id</td>
+            <td>@professor.Nome</td>
+            <td>@professor.Idade</td>
+            <td>@professor.Genero</td>
+            <td>@professor.Materia</td>
+        </tr>
+      }
+   
+  </tbody>
+    </table>
+</div>
